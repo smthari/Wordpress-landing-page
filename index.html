@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<style>
+		*{
+    margin:0px;
+    padding:0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+body {
+   font-family: 'Poppins', sans-serif;
+     background-image: linear-gradient(to left, #c2affa, #bfdce3);
+}
+
+button {
+     font-family: 'Poppins', sans-serif;
+}
+
+header{
+    width:90%;
+    margin:auto;
+    height:10vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container, .nav-links, .cart {
+    display: flex;
+}
+
+.logo-container{
+    flex:1;
+}
+
+.logo {
+    padding:5px;
+    font-weight: 400;
+}
+
+nav {
+    flex:2;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:#252929;
+    font-size: 20px;
+    
+}
+.cart {
+    flex:1
+}
+
+.cart{
+    justify-content: flex-end;
+}
+
+.presentation {
+     width:90%;
+    margin:auto;
+    min-height:80vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro {
+    flex:1
+}
+
+.intro-text h1 {
+    font-size: 44px;
+    font-weight: 400;
+     background: linear-gradient(to right,grey, #695b5a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+    letter-spacing: 2px;
+    color:#feace;
+    font-size: 20px;
+    text-align: justify all;
+}
+
+.cta {
+    padding: 50px 0px 0px 0px;
+}
+
+.cta-select {
+    border:2px solid grey;
+    height:50px;
+    width: 150px;
+    color:brown;
+    background:transparent;
+    font-size: 16px;
+    cursor: pointer;   
+}
+
+.cta-add {
+    border:none;
+    height:50px;
+    width: 150px;
+    color:white;
+    background:#0a6680;
+    font-size: 16px;
+    cursor: pointer;
+    margin:20px;
+
+}
+
+.cover {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+
+.cover img{
+    height: 100%;
+     filter:drop-shadow(8px 8px 10px gray);
+    animation: drop 2.5s ease;
+}
+
+
+
+
+.big-circle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+.medium-circle {
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	z-index: -1;
+	height: 60%;
+	opacity: 0.4;
+}
+.small-circle {
+	position: absolute;
+	bottom: 0%;
+	left: 20%;
+	z-index: -1;
+}
+
+.laptop-select {
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	right: 20%;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.intro {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 10px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+        font-family:  cursive
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.cover img {
+		height: 80%;
+	}
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
+}
+
+	</style>
+	<title>Landing Page</title>
+</head>
+
+<body>
+	
+	<header>
+		<div class="logo-container">
+			<img src="wordpress.png" alt="logo" />
+			<h4 class="logo">Wordpress</h4>
+		</div>
+
+		<nav>
+			<ul class="nav-links">
+				<li><a class="nav-link" href="#">Home</a></li>
+				<li><a class="nav-link" href="#">Services</a></li>
+				<li><a class="nav-link" href="#">My Account</a></li>
+			</ul>
+		</nav>
+
+		<div class="cart">
+			<img src="cart.svg" alt="cart" />
+		</div>
+	</header>
+	<main>
+		<section class="presentation">
+			<div class="intro">
+				<div class="intro-text">
+					<h1>Make a website in wordpress </h1>
+					<p>WordPress is, by far, the most popular open source Content Management System (CMS), used by
+						approximately 75 million websites. WordPress is free to install, deploy, and upgrade. Thousands
+						of plugins and templates power a flexible and simple interface, which reduces development costs
+						and deployment time</p>
+				</div>
+				<div class="cta">
+					<button class="cta-select">Sing up</button>
+					<button class="cta-add">Sign in</button>
+				</div>
+			</div>
+			<div class="cover">
+				<img src="https://www.sparxitsolutions.com/assets/images/wordpress-web-development-company.webp"
+					alt=website style="width: 400px; height: 400px;">
+			</div>
+		</section>
+		<div class="laptop-select">
+			<img src="arrow-left.svg" alt="" />
+			<img src="dot.svg" alt="" />
+			<img src="dot-full.svg" alt="" />
+			<img src="dot-full.svg" alt="" />
+			<img src="arrow-right.svg" alt="" />
+		</div>
+
+		<img class="big-circle" src="big-eclipse.svg" alt="" />
+		<img class="medium-circle" src="mid-eclipse.svg" alt="" />
+		<img class="small-circle" src="small-eclipse.svg" alt="" />
+	</main>
+
+</body>
